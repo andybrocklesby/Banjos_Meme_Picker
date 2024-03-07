@@ -6,6 +6,18 @@ const isGifCheckbox = document.getElementById('is-gif-checkbox')
 const modal = document.getElementById('modal')
 const closeModalBtn = document.getElementById('modal-close-btn')
 const locationToAppendImage = document.getElementById('image-container')
+const emotionRadios = document.getElementById('emotions-display')
+
+emotionRadios.addEventListener('change', function(e){
+    const radiosArray = document.getElementsByClassName('radio')
+
+    for(let radio of radiosArray){
+        radio.classList.remove('highlight')
+    }
+
+    document.getElementById(e.target.id).parentElement.classList.add('highlight')
+})
+
 
 getImageBtn.addEventListener('click', renderImageInModal)
 closeModalBtn.addEventListener('click', function(){
