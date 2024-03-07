@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banjo's Perfect Meme Picker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <header class="flex-row">
+        <img 
+            class="logo"    
+            src="./images/logo.png" 
+            alt="Image of my boxer dog, Banjo">
+        <h1>Banjos Perfect Meme Picker 🎉 🐾</h1>
+    </header>
+
+    <section class="app">
+        <div class="app-card place-center">
+            <h2>Pick an Emotion</h2>
+            <div class="emotions-display" id="emotions-display">
+                <div class="radio flex-row">
+                    <label class="emotion-label" for="sad">sad</label>
+                    <input 
+                        class="emotion-radio"
+                        type="radio"
+                        id="sad"
+                        value="sad"
+                        name="emotion">
+                </div> 
+            </div>
+            <div class="checkbox flex-row">
+                <label class="is-gif-checkbox" for="is-gif-checkbox">Gif Only</label>
+                <input 
+                    class="gif-checkbox" 
+                    type="checkbox"
+                    id="is-gif-checkbox">
+            </div>
+            <button id="get-image-btn">Get Image</button>
+        </div>
+
+        <div class="modal place-center" id="modal">
+            <button class="modal-close-btn" id="modal-close-btn">X</button>
+            <div class="image-container place-center" id="image-container">
+                
+            </div>
+        </div>
+    </section>
+
+    <script src="./app.js" type="module"></script>
+
+</body>
+</html>
